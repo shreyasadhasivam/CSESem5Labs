@@ -1,4 +1,5 @@
-
+#include<stdio.h>
+//print array
 void printArray(int array[], int size){
 	for(int i= 0;i<=size;++i)
 	{
@@ -17,5 +18,5 @@ int main()
 
 	printf("Entered array   :\n");
 	printArray(data,size);
-
+	
 }
