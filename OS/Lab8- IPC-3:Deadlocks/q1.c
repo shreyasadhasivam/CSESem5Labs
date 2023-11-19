@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
-int buf[10], f, r;
+int buf[5], f, r;
 sem_t mutex, full, empty;
 void *produce(void *arg)
 {
@@ -35,7 +35,7 @@ int main()
     pthread_t t1, t2;
     sem_init(&mutex, 0, 1);
     sem_init(&full, 0, 1);
-    sem_init(&empty, 0, 10);
+    sem_init(&empty, 0, 5);
     pthread_create(&t1, NULL, produce, NULL);
     pthread_create(&t2, NULL, consume, NULL);
     pthread_join(t1, NULL);
