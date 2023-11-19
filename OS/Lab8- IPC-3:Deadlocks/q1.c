@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <pthread.h>
 #include <semaphore.h>
-int buf[5], f, r;
+int buf[10], f, r;
 sem_t mutex, full, empty;
 void *produce(void *arg)
 {
